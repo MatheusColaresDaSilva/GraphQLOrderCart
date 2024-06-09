@@ -7,10 +7,10 @@ const nois = {
         T: {
             __resolveType(obj: any, context: any, info: any) {
                 if (obj.name) {
-                    return 'Person'; // Retornar o nome do tipo diretamente
+                    return 'Person'; 
                   }
                   if (obj.description) {
-                    return 'Product'; // Retornar o nome do tipo diretamente
+                    return 'Product';
                   }
                   return null;
             },
