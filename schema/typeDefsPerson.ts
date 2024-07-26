@@ -8,7 +8,7 @@ export const typeDefsPerson  = gql`
   }
 
   type Mutation {
-    createPerson(pessoaRequestDTO: PersonInput!): Person!
+    createPerson(person: PersonInput!): Person!
   }
 
   type Person implements T{

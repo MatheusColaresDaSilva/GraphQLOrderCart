@@ -34,10 +34,10 @@ export const resolversPerson = {
   Mutation: {
     createPerson: async (_: any, { person } : { person : any } ) => {
       try {
-        const response = await axios.post(`${API_BASE_URL}/person`, { pessoaRequestDTO: person });
+        const response = await axios.post(`${API_BASE_URL}/person`,  person );
         return response.data.content;
       } catch (error) {
-        console.error(error);
+        console.error('Error creating person on backend:', error);
         throw new Error('Failed to create person');
       }
     }
