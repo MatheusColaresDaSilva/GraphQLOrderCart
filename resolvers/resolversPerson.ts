@@ -32,9 +32,9 @@ export const resolversPerson = {
     },
   },
   Mutation: {
-    createPerson: async (_: any, { pessoaRequestDTO } : { pessoaRequestDTO : Person } ) => {
+    createPerson: async (_: any, { person } : { person : any } ) => {
       try {
-        const response = await axios.post(`${API_BASE_URL}/person`, { pessoaRequestDTO });
+        const response = await axios.post(`${API_BASE_URL}/person`, { pessoaRequestDTO: person });
         return response.data.content;
       } catch (error) {
         console.error(error);
